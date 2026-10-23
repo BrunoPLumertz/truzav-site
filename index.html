@@ -201,6 +201,21 @@ h2{font-size:clamp(1.75rem,5vw,2.75rem)}
 .pf .tx li{display:flex;gap:12px;align-items:baseline;color:var(--cm)}
 .pf .tx li:before{content:"";width:8px;height:8px;background:var(--o);flex:none;transform:translateY(-1px)}
 
+/* rede social x site */
+.vs{background:color-mix(in srgb,var(--c) 93%,var(--g));color:var(--g);border-top:1px solid var(--ll)}
+.vs .lead2{margin-top:16px;max-width:42rem;font-size:clamp(1.0625rem,3.4vw,1.25rem)}
+.vs .vg{display:grid;gap:16px;margin-top:40px}
+@media(min-width:900px){.vs .vg{grid-template-columns:5fr 7fr;gap:20px}}
+.vs .va{border:2px solid var(--ll);border-radius:4px;padding:28px}
+.vs .vb{background:var(--g);color:var(--c);border-radius:4px;padding:28px}
+.vs h3{font-size:1.375rem;margin-bottom:20px}
+.vs ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.vs li{display:flex;gap:12px;align-items:baseline}
+.vs .va li{color:var(--gm)}
+.vs .va li:before{content:"";width:10px;height:2px;background:var(--gm);flex:none;transform:translateY(-4px)}
+.vs .vb li:before{content:"";width:10px;height:10px;background:var(--o);flex:none}
+.vs .fn{margin-top:32px;max-width:44rem;font:600 clamp(1.125rem,3vw,1.375rem)/1.4 var(--h)}
+
 /* sobre */
 .sb .w>div{max-width:44rem}
 .sb h2{font-size:clamp(1.75rem,5vw,3rem);letter-spacing:-.03em}
@@ -355,6 +370,34 @@ h2{font-size:clamp(1.75rem,5vw,2.75rem)}
  </div>
 </section>
 
+<section class="vs" id="rede-social" aria-labelledby="t-vs">
+ <div class="w">
+  <h2 id="t-vs">Já tenho Instagram. Preciso de um site?</h2>
+  <p class="lead2 mu">Um não substitui o outro. O Instagram mostra o seu trabalho. O site explica tudo e dá ao cliente um lugar só para decidir e falar com você.</p>
+  <div class="vg">
+   <div class="va rv">
+    <h3>No Instagram e no Facebook</h3>
+    <ul>
+     <li>O espaço é da plataforma, e as regras mudam.</li>
+     <li>Serviços, contato e como chamar ficam espalhados entre posts e destaques.</li>
+     <li>Algumas pessoas precisam de conta para ver o conteúdo.</li>
+     <li>A conta pode ser bloqueada ou invadida.</li>
+    </ul>
+   </div>
+   <div class="vb rv">
+    <h3>No seu site</h3>
+    <ul>
+     <li>O endereço é seu e fica sob o seu controle.</li>
+     <li>Serviços, como chamar e dúvidas comuns em um lugar só.</li>
+     <li>Abre em qualquer celular, sem conta e sem aplicativo.</li>
+     <li>Pode ser encontrado por quem pesquisa no Google.</li>
+    </ul>
+   </div>
+  </div>
+  <p class="fn rv">Use o Instagram para mostrar. Use o site para convencer e receber a conversa.</p>
+ </div>
+</section>
+
 <section class="dk" id="diferenciais" aria-labelledby="t-dif">
  <div class="w">
   <h2 id="t-dif">Mais do que montar a página.</h2>
@@ -393,6 +436,7 @@ h2{font-size:clamp(1.75rem,5vw,2.75rem)}
  <div class="w">
   <h2 id="t-faq">Dúvidas comuns.</h2>
   <div class="fq rv">
+   <details><summary>Já tenho Instagram. Preciso de um site?</summary><p class="mu">Um não substitui o outro. O Instagram mostra o seu trabalho. O site reúne serviços, como chamar e dúvidas em um lugar que é seu.</p></details>
    <details><summary>Quanto custa?</summary><p class="mu">Landing pages a partir de R$ 720 e sites a partir de R$ 1.350. O valor final depende do que você precisa: conte o seu projeto e mandamos o valor.</p></details>
    <details><summary>Preciso ter um domínio?</summary><p class="mu">Sim. O domínio é registrado no seu nome e na sua conta, então ele é sempre seu. Se precisar, ajudamos no registro, e nós ligamos o site a ele. <a href="ajuda-dominio.html">Veja como registrar o seu domínio</a>.</p></details>
    <details><summary>Quem escreve os textos?</summary><p class="mu">Escrevemos juntos. Você conta como trabalha, nós organizamos os textos e você aprova antes de a página ser montada.</p></details>
@@ -441,7 +485,7 @@ h2{font-size:clamp(1.75rem,5vw,2.75rem)}
   hh.addEventListener("pointermove",function(e){tx=e.clientX;ty=e.clientY;if(!run)run=requestAnimationFrame(step)})}
  if("IntersectionObserver" in window){var po=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle("paused",!e.isIntersecting)})});document.querySelectorAll(".mq,.hero").forEach(function(x){po.observe(x)})}
  var nl=document.querySelectorAll('.mn a[href^="#"]'),nm={};nl.forEach(function(a){nm[a.getAttribute("href").slice(1)]=a});
- var mp={projetos:"projetos",servicos:"servicos",diferenciais:"servicos","como-funciona":"como-funciona",sobre:"sobre",duvidas:"duvidas",contato:"contato"},ss=Object.keys(mp).map(function(i){return document.getElementById(i)}).filter(Boolean),tk=0;
+ var mp={projetos:"projetos",servicos:"servicos","rede-social":"servicos",diferenciais:"servicos","como-funciona":"como-funciona",sobre:"sobre",duvidas:"duvidas",contato:"contato"},ss=Object.keys(mp).map(function(i){return document.getElementById(i)}).filter(Boolean),tk=0;
  function mark(){tk=0;var y=innerHeight*.4,cur=null;ss.forEach(function(e){var q=e.getBoundingClientRect();if(q.top<=y&&q.bottom>y)cur=mp[e.id]});nl.forEach(function(l){if(cur&&l.getAttribute("href")==="#"+cur)l.setAttribute("aria-current","true");else l.removeAttribute("aria-current")})}
  addEventListener("scroll",function(){if(!tk)tk=requestAnimationFrame(mark)},{passive:true});addEventListener("resize",mark);mark();
  document.querySelectorAll(".pf .cs").forEach(function(c){var f=c.querySelector(".fr"),im=f.querySelectorAll("img"),bs=c.querySelectorAll(".tb button");
