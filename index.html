@@ -203,6 +203,8 @@ h2{font-size:clamp(1.75rem,5vw,2.75rem)}
 .pf .tx ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px;max-width:30rem}
 .pf .tx li{display:flex;gap:12px;align-items:baseline;color:var(--cm)}
 .pf .tx li:before{content:"";width:8px;height:8px;background:var(--o);flex:none;transform:translateY(-1px)}
+.pf .tx .btn{margin-top:28px}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* rede social x site */
 .vs{background:color-mix(in srgb,var(--c) 93%,var(--g));color:var(--g);border-top:1px solid var(--ll)}
@@ -331,8 +333,15 @@ h2{font-size:clamp(1.75rem,5vw,2.75rem)}
 <section class="dk pf" id="projetos" aria-labelledby="t-proj">
  <div class="w">
   <h2 id="t-proj">Alguns projetos que fizemos.</h2>
-  <p class="hint mu">Passe o mouse ou toque na imagem para rolar a página. Troque de tela nas abas. São prints, porque os projetos ainda não foram publicados.</p>
+  <p class="hint mu">Passe o mouse ou toque na imagem para rolar a página. Troque de tela nas abas. São prints. O que já está no ar tem o link para abrir.</p>
   <div class="gr">
+   <article class="cs rv">
+    <div class="vw">
+     <div class="tb" role="group" aria-label="Telas do CT Estima Boxe"><button type="button" aria-pressed="true">Início</button><button type="button" aria-pressed="false">Método</button><button type="button" aria-pressed="false">Equipe</button></div>
+     <div class="fr" tabindex="0" role="group" aria-label="Rolar a tela do CT Estima Boxe"><img class=on src="portfolio/estimaboxe.webp" width="760" height="1208" loading="lazy" decoding="async" alt="Página inicial do CT Estima Boxe: abertura com o título Aqui o boxe é levado a sério, convite para a aula experimental e os passos da primeira aula."><img src="portfolio/estimaboxe-metodo.webp" width="760" height="626" loading="lazy" decoding="async" alt="Seção do método do CT Estima Boxe, com as manoplas interativas de jab, direto e gancho e os pilares técnica, condicionamento e respeito."><img src="portfolio/estimaboxe-equipe.webp" width="760" height="1213" loading="lazy" decoding="async" alt="Seções de equipe e depoimentos do CT Estima Boxe: números do CT, fotos de pódio e vídeos de quatro alunos."></div>
+    </div>
+    <div class="tx"><h3>CT Estima Boxe</h3><p>CT de boxe em Viamão mostra o método e a equipe, e o aluno marca a aula experimental pelo WhatsApp.</p><p class="lb">O que tem nele</p><ul><li>Aula experimental marcada pelo WhatsApp, com mensagem pronta</li><li>Manoplas interativas para o visitante testar o jab, direto e gancho</li><li>Depoimentos em vídeo dos alunos</li><li>Planos e horários, com aviso de aberto ou fechado na hora</li><li>Localização com mapa</li></ul><a class="btn b2" href="https://estimaboxe.com.br" target="_blank" rel="noopener">Ver o site<span class="sr"> do CT Estima Boxe (abre em nova aba)</span></a></div>
+   </article>
    <article class="cs rv">
     <div class="vw">
      <div class="tb" role="group" aria-label="Telas do ChamaQR"><button type="button" aria-pressed="true">Início</button><button type="button" aria-pressed="false">Gerador</button></div>
